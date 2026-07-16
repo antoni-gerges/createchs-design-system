@@ -2,12 +2,14 @@
 
 The reusable, installable design system for **CreateCHS** — one source of truth any Createchs app can import. Built accessible by default (WCAG AA).
 
+**📖 Live brand guidelines:** https://antoni-gerges.github.io/createchs-design-system/
+
 ## Packages
 
 | Package | What it is |
 |---|---|
 | [`@createchs/tokens`](packages/tokens) | Framework-agnostic design tokens — CSS custom properties (`--cx-*`) + typed TS. Colours, the 4-C accents with tint ramps, type scale, spacing, radius, motion and a11y constants. Self-hosts Fahkwang + Space Grotesk. |
-| [`@createchs/ui`](packages/ui) | React component library — `Mark`, `Lockup`, `Button`, `Badge`, `Field`, `Stat`, `Sparkline`, `ColorSwatch`, `TypeSpecimen`, `EnergyLine`, `PageHeader/Footer`, `FourCsDiagram`, `FourCsMachine`. Ships ESM + `.d.ts`. |
+| [`@createchs/ui`](packages/ui) | React component library — `Mark`, `Lockup`, `Button`, `Badge`, `Field`, `Stat`, `Sparkline`, `ColorSwatch`, `TypeSpecimen`, `EnergyLine`, `EnergyMotif`, `PageHeader/Footer`, `MarkConstruction`, `MarkFormation`, `CPortrait`. Ships ESM + `.d.ts`. The 4Cs Machine ships as canonical SVG artwork (`apps/docs/public/assets/createchs-4cs-machine.svg`). |
 | [`apps/docs`](apps/docs) | The living brand guidelines, rendered entirely from the library. |
 
 ## Getting started
@@ -30,13 +32,13 @@ pnpm typecheck        # type-check every package
 ```tsx
 import '@createchs/tokens/tokens.css';   // custom properties + self-hosted fonts
 import '@createchs/ui/styles.css';
-import { Button, Badge, FourCsMachine } from '@createchs/ui';
+import { Button, Badge, EnergyLine } from '@createchs/ui';
 
 export default () => (
   <>
     <Button variant="accent">Book a demo</Button>
     <Badge tone="positive">New</Badge>
-    <FourCsMachine animated />
+    <EnergyLine />
   </>
 );
 ```
