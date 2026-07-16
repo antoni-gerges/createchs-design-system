@@ -1,0 +1,24 @@
+{
+  "name": "@createchs/tokens",
+  "version": "0.1.0",
+  "description": "CreateCHS design tokens — the single source of truth (CSS custom properties + typed TS).",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./tokens.css": "./styles/tokens.css",
+    "./fonts.css": "./styles/fonts.css"
+  },
+  "files": ["dist", "styles"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}

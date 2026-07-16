@@ -1,0 +1,18 @@
+{
+  "name": "createchs-ds",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.13.1",
+  "scripts": {
+    "build:tokens": "pnpm --filter @createchs/tokens build",
+    "build:ui": "pnpm --filter @createchs/ui build",
+    "build:packages": "pnpm run build:tokens && pnpm run build:ui",
+    "dev": "pnpm run build:packages && pnpm --filter @createchs/docs dev",
+    "build": "pnpm run build:packages && pnpm --filter @createchs/docs build",
+    "preview": "pnpm --filter @createchs/docs preview",
+    "typecheck": "pnpm -r exec tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}

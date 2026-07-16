@@ -1,0 +1,94 @@
+/* ============================================================
+   CreateCHS Design Tokens — single source of truth
+   All 7 approved WCAG-AA fixes are encoded here (see the a11y notes).
+   Prefix: --cx-*
+   ============================================================ */
+@import "./fonts.css";
+
+:root {
+  /* ===== Core neutrals ===== */
+  --cx-ink: #0A0B0D;          /* primary dark ground / ink */
+  --cx-offblack: #08090B;     /* deepest black — cover & close */
+  --cx-paper: #F3F1EA;        /* brand paper white — warm off-white (do not use pure #FFF) */
+  --cx-paper-card: #FBFAF5;   /* inset card on paper */
+  --cx-white: #F4F5F7;        /* off-white type on dark */
+  --cx-panel: #141519;        /* dark surface / card */
+  --cx-panel-2: #17191E;      /* raised dark surface */
+  --cx-input-bg: #0C0D10;
+
+  /* ===== Accent families (hue names) — each with a 4-step ramp ===== */
+  --cx-cyan: #17D4D4;   --cx-cyan-100:#8CEDED; --cx-cyan-core:#6BEAEA; --cx-cyan-700:#0E9E9E; --cx-cyan-900:#0A5C5C; --cx-cyan-hover:#58EDEA;
+  --cx-orange:#FF6B2C;  --cx-orange-100:#FFB088; --cx-orange-core:#FFB06A; --cx-orange-700:#E2560F; --cx-orange-900:#B3410F; --cx-orange-hover:#FF8A4C;
+  --cx-lime:#BEE83A;    --cx-lime-100:#DBF48C; --cx-lime-700:#98BE1F; --cx-lime-900:#6E8C00;
+  --cx-pink:#FF2D8E;    --cx-pink-100:#FF8FC1; --cx-pink-core:#FF6FB0; --cx-pink-700:#D61B75; --cx-pink-900:#A81159;
+
+  /* ===== Semantic aliases (reference roles, not hues) ===== */
+  --cx-primary: var(--cx-cyan);
+  --cx-accent: var(--cx-orange);
+  --cx-on-accent: var(--cx-ink);      /* a11y #1/#2: accent fills take INK text, never white */
+  --cx-positive: var(--cx-lime);      /* role decision: Lime = success/positive */
+  --cx-notice: var(--cx-pink);        /* role decision: Pink = notice/priority (CRM) */
+  --cx-danger: #FF5A6E;               /* brand has no red — dedicated legible danger */
+
+  /* Grounds & surfaces (dark is the primary brand ground) */
+  --cx-bg: var(--cx-ink);
+  --cx-surface: var(--cx-panel);
+  --cx-surface-2: var(--cx-panel-2);
+  --cx-on-bg: var(--cx-white);
+  --cx-border: rgba(255,255,255,.12);
+  --cx-border-strong: rgba(255,255,255,.24);
+
+  /* Text on dark — a11y #4: text floor = 55%, 40% is decorative-only */
+  --cx-text: var(--cx-white);
+  --cx-text-muted: rgba(255,255,255,.70);
+  --cx-text-subtle: rgba(255,255,255,.55);   /* minimum opacity for TEXT */
+  --cx-text-decor: rgba(255,255,255,.40);    /* decorative marks only — never text */
+
+  /* On paper (light editorial ground) */
+  --cx-paper-text: #0A0B0D;
+  --cx-paper-muted: rgba(10,11,13,.70);
+  --cx-paper-subtle: rgba(10,11,13,.55);
+  --cx-paper-border: rgba(10,11,13,.14);
+  --cx-cyan-on-paper: var(--cx-cyan-900);     /* a11y #3: #0A5C5C for text, not #0C8F8F */
+  --cx-orange-on-paper: var(--cx-orange-900); /* a11y #3: #B3410F for text, not #D9530F */
+
+  /* ===== Typography ===== */
+  --cx-font-display: 'Fahkwang', Georgia, 'Times New Roman', serif;
+  --cx-font-sans: 'Space Grotesk', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --cx-fw-light:300; --cx-fw-regular:400; --cx-fw-medium:500; --cx-fw-semibold:600; --cx-fw-bold:700;
+
+  --cx-fs-display:96px; --cx-lh-display:.9;
+  --cx-fs-h1:64px;
+  --cx-fs-heading:44px; --cx-lh-heading:1.05;
+  --cx-fs-subhead:28px;
+  --cx-fs-lead:20px;
+  --cx-fs-body:16px;  --cx-lh-body:1.6;
+  --cx-fs-small:13px;
+  --cx-fs-label:11px; --cx-ls-label:3px;
+
+  /* ===== Radius ===== */
+  --cx-radius-sharp:4px;
+  --cx-radius:16px;        /* soft — default card corner */
+  --cx-radius-round:26px;
+  --cx-radius-pill:100px;
+  --cx-radius-input:10px;
+
+  /* ===== Spacing (4 / 8 rhythm) ===== */
+  --cx-space-1:4px;  --cx-space-2:8px;  --cx-space-3:12px; --cx-space-4:16px;
+  --cx-space-5:20px; --cx-space-6:24px; --cx-space-8:32px; --cx-space-10:40px;
+  --cx-space-12:48px; --cx-space-15:60px; --cx-space-20:80px;
+
+  /* ===== Motion ===== */
+  --cx-dur-fast:150ms; --cx-dur:220ms; --cx-dur-slow:320ms;
+  --cx-ease-out:cubic-bezier(.2,.7,.2,1);
+  --cx-ease-in:cubic-bezier(.5,0,.75,.3);
+
+  /* ===== Focus & touch targets (a11y #5 / #6) ===== */
+  --cx-focus-ring: 2px solid var(--cx-primary);
+  --cx-focus-offset: 2px;
+  --cx-min-target: 44px;
+
+  /* ===== Elevation ===== */
+  --cx-shadow-card: 0 8px 30px rgba(0,0,0,.35);
+  --cx-shadow-page: 0 30px 80px rgba(0,0,0,.5);
+}
