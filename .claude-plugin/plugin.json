@@ -1,0 +1,9 @@
+{
+  "name": "createchs-design",
+  "description": "The CreateCHS design system for Claude — brand rules, design tokens, and the @createchs/ui component kit. Makes Claude build every Createchs UI on-brand and WCAG-AA by default.",
+  "version": "1.0.0",
+  "author": { "name": "Createchs", "email": "antoni@antbrush.com" },
+  "homepage": "https://antoni-gerges.github.io/createchs-design-system/",
+  "repository": "https://github.com/antoni-gerges/createchs-design-system",
+  "keywords": ["design-system", "createchs", "brand", "tokens", "react"]
+}

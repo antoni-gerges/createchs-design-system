@@ -1,0 +1,11 @@
+{
+  "name": "createchs",
+  "owner": { "name": "Createchs", "email": "antoni@antbrush.com" },
+  "plugins": [
+    {
+      "name": "createchs-design",
+      "source": "./",
+      "description": "CreateCHS design system — brand rules, tokens, and components applied automatically when building UI."
+    }
+  ]
+}

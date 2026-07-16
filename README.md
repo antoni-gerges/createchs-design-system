@@ -9,7 +9,7 @@ The reusable, installable design system for **CreateCHS** — one source of trut
 | Package | What it is |
 |---|---|
 | [`@createchs/tokens`](packages/tokens) | Framework-agnostic design tokens — CSS custom properties (`--cx-*`) + typed TS. Colours, the 4-C accents with tint ramps, type scale, spacing, radius, motion and a11y constants. Self-hosts Fahkwang + Space Grotesk. |
-| [`@createchs/ui`](packages/ui) | React component library — `Mark`, `Lockup`, `Button`, `Badge`, `Field`, `Stat`, `Sparkline`, `ColorSwatch`, `TypeSpecimen`, `EnergyLine`, `EnergyMotif`, `PageHeader/Footer`, `MarkConstruction`, `MarkFormation`, `CPortrait`. Ships ESM + `.d.ts`. The 4Cs Machine ships as canonical SVG artwork (`apps/docs/public/assets/createchs-4cs-machine.svg`). |
+| [`@createchs/ui`](packages/ui) | React component library — `Mark`, `Lockup`, `Button`, `Badge`, `Field`, `Stat`, `Sparkline`, `ColorSwatch`, `TypeSpecimen`, `EnergyLine`, `EnergyField`, `PageHeader/Footer`, `MarkConstruction`, `MarkFormation`, `CPortrait`. Ships ESM + `.d.ts`. The 4Cs Machine ships as canonical SVG artwork (`apps/docs/public/assets/createchs-4cs-machine.svg`). |
 | [`apps/docs`](apps/docs) | The living brand guidelines, rendered entirely from the library. |
 
 ## Getting started
@@ -41,6 +41,15 @@ export default () => (
     <EnergyLine />
   </>
 );
+```
+
+## Use it in Claude (team)
+
+This repo is also a Claude Code plugin. Once installed, Claude automatically applies the CreateCHS tokens, components, and brand/a11y rules whenever it builds UI. In any Claude Code session run:
+
+```
+/plugin marketplace add antoni-gerges/createchs-design-system
+/plugin install createchs-design@createchs
 ```
 
 ## Accessibility baseline
